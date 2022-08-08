@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-04T11:44:07 EDT" name="Default suite" finished-at="2022-07-04T11:44:21 EDT" duration-ms="14740">
+    <groups>
+    </groups>
+    <test started-at="2022-07-04T11:44:07 EDT" name="Default test" finished-at="2022-07-04T11:44:21 EDT" duration-ms="14740">
+      <class name="dataDriven.DataDrivenTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:07 EDT" name="setUp" finished-at="2022-07-04T11:44:07 EDT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="intialization()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:07 EDT" name="intialization" finished-at="2022-07-04T11:44:09 EDT" duration-ms="1710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:09 EDT" name="login" data-provider="excelData" finished-at="2022-07-04T11:44:09 EDT" duration-ms="435" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:09 EDT" name="closeBrowser" finished-at="2022-07-04T11:44:10 EDT" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="intialization()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:10 EDT" name="intialization" finished-at="2022-07-04T11:44:11 EDT" duration-ms="1545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:11 EDT" name="login" data-provider="excelData" finished-at="2022-07-04T11:44:12 EDT" duration-ms="696" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at dataDriven.DataDrivenTest.login(DataDrivenTest.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:12 EDT" name="closeBrowser" finished-at="2022-07-04T11:44:12 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="intialization()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:12 EDT" name="intialization" finished-at="2022-07-04T11:44:14 EDT" duration-ms="1493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:14 EDT" name="login" data-provider="excelData" finished-at="2022-07-04T11:44:14 EDT" duration-ms="459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:14 EDT" name="closeBrowser" finished-at="2022-07-04T11:44:14 EDT" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="intialization()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:14 EDT" name="intialization" finished-at="2022-07-04T11:44:16 EDT" duration-ms="1481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:16 EDT" name="login" data-provider="excelData" finished-at="2022-07-04T11:44:21 EDT" duration-ms="5381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:dataDriven.DataDrivenTest@291caca8]" started-at="2022-07-04T11:44:21 EDT" name="closeBrowser" finished-at="2022-07-04T11:44:21 EDT" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- dataDriven.DataDrivenTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
